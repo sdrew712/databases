@@ -9,4 +9,13 @@ def sales_reports(log_file): #creates function sales_reports that uses the file
             print(line) #print the whole line
 
 
-sales_reports(log_file) #calls the previous function and passes in the file
+# sales_reports(log_file) #calls the previous function and passes in the file
+
+def large_melons(log_file):
+    for line in log_file:
+        line = line.rstrip()
+        melon_amount = int(line[15:18])
+        if melon_amount > 10:
+            print(line)
+
+large_melons(log_file)
